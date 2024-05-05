@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holi 2024 Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #241e1e;
+}
+
+header {
+    background-color: #ff6b6b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 3cm auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.description h2,
+.countdown h2 {
+    color: #ff6b6b;
+}
+
+.description p {
+    line-height: 1.5;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    font-size: 2rem;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+    .time {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Holi 2024 Countdown</h1>
+    </header>
+    <section class="content">
+        <div class="description">
+            <h2>About Holi</h2>
+            <p>Holi, also known as the Festival of Colors, is a popular Hindu spring festival celebrated with enthusiasm and joy. It signifies the victory of good over evil and the arrival of spring. People celebrate by smearing colorful powders and throwing water balloons at each other.</p>
+        </div>
+        <div class="countdown">
+            <h2>Countdown to Holi 2024</h2>
+            <div id="countdown-timer">
+                <div class="time"><span id="days">00</span><span>&nbsp;Days</span></div>
+                <div class="time"><span id="hours">00</span><span>&nbsp;Hours</span></div>
+                <div class="time"><span id="minutes">00</span><span>&nbsp;Minutes</span></div>
+                <div class="time"><span id="seconds">00</span><span>&nbsp;Seconds</span></div>
+            </div>
+        </div>
+    </section>
+    <div id="icon" style="float: left;">
+        <a href="Main web Page.html" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2544/2544087.png" alt="homepage icon" width="100" height="100" a>
+    </div>
+    <div id="icon" style="float: right;" >
+        <a href="Calendar.webp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3652/3652267.png" alt="calendar_icon" width="100" height="100" a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set the date we're counting down to
+            var countDownDate = new Date("Mar 25, 2024 00:00:00").getTime();
+
+            // Update the countdown every 1 second
+            var x = setInterval(function () {
+                // Get the current date and time
+                var now = new Date().getTime();
+
+                // Calculate the remaining time
+                var distance = countDownDate - now;
+
+                // Calculate days, hours, minutes, and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the countdown
+                document.getElementById("days").innerHTML = `${days}`;
+                document.getElementById("hours").innerHTML = `${hours}`;
+                document.getElementById("minutes").innerHTML = `${minutes}`;
+                document.getElementById("seconds").innerHTML = `${seconds}`;
+
+                // If the countdown is over, display a message
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Happy Holi";
+                }
+            }, 1000); 
+        });
+    </script>
+
+</body>
+</html>

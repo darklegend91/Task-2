@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry X'mas</title>
+    <!-- <style> -->
+<link rel="stylesheet" href="Fee project.css">
+<style>
+    body{
+        background-image:url("https://www.hdwallpapers.in/download/glittering_christmas_tree_in_black_background_hd_christmas-1600x900.jpg");
+    }
+    #countdown{
+        margin-top:1cm;
+        margin-bottom: 1.5cm;
+    }
+    #wishes{
+        margin-top:2cm;
+        margin-bottom: 2cm;
+    }
+</style>
+</head>
+<body>
+    <header class="text" >
+        <h1 id="heading">Merry Christmas</h1>
+        <p class="para"> Welcoming Christmas with open hearts and twinkling lights, a season of joy and togetherness that fills our nights.</p>
+    </header>
+   
+    <div id="countdown" class="text" >
+        <div id="timer">
+            <div>
+                <span id="days">0</span>
+                <span>Days</span>
+            </div>
+            <div>
+                <span id="hours">0</span>
+                <span>Hours</span>
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                <span>Seconds</span>
+            </div>
+        </div>
+    </div>
+    <div id="wishes">
+    <p class="text">
+    As the year draws to a close, We extend our heartfelt wishes for a prosperous and joyous New Year to you and your esteemed colleagues.
+    <p>Let us welcome the New Year with a renewed commitment to our shared goals and unwavering dedication to our collective success. </p>
+     <p>May 2024 be marked by even greater accomplishments and strengthen the bonds of our valued partnership.</p>
+
+    </p>
+    </div>
+    <div id="icon" style="float: left;">
+        <a href="Main web Page.html" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2544/2544087.png" alt="homepage icon" width="100" height="100" a>
+    </div>
+    <div id="icon" style="float: right;" >
+        <a href="Calendar.webp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3652/3652267.png" alt="calendar_icon" width="100" height="100" a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set the date we're counting down to
+            var countDownDate = new Date("Dec 25, 2023 00:00:00").getTime();
+
+            // Update the countdown every 1 second
+            var x = setInterval(function () {
+                // Get the current date and time
+                var now = new Date().getTime();
+
+                // Calculate the remaining time
+                var distance = countDownDate - now;
+
+                // Calculate days, hours, minutes, and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the countdown
+                document.getElementById("days").innerHTML = `${days}`;
+                document.getElementById("hours").innerHTML = `${hours}`;
+                document.getElementById("minutes").innerHTML = `${minutes}`;
+                document.getElementById("seconds").innerHTML = `${seconds}`;
+
+                // If the countdown is over, display a message
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Merry Christmas";
+                }
+            }, 1000); 
+        });
+    </script>
+
+
+</body>
+</html>

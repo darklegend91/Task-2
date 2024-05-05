@@ -1,0 +1,78 @@
+*{ margin: 0;padding: 0;}
+
+body {margin: 0; padding: 0;
+  background-size:cover;
+  background-repeat: none;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;}
+
+ul {
+  list-style-type: none;
+  padding:  auto auto 10px;
+  margin: 0px;
+}
+.text{ margin-top: 0.4cm; padding:18px; }
+header {
+  margin-top: -2.5cm ; text-align: center; 
+  padding: 20px;  margin-bottom: -1.5cm;
+}
+#heading {
+  margin-top: -1.46cm;  font-size: 2cm;
+  font-family:'segoe print';
+  font-weight: bold;  color: wheat;}
+.para{
+  margin-top: .0cm; font-size: .7cm;
+  font-family:'segoe print'; font-weight: bold;
+  margin-bottom: 2cm;  line-height: 2cm;
+}
+#wishes{
+  font-size: 0.7cm; font-family:'segoe print';
+  font-weight: bold; text-align: center;
+  margin: 10px;
+  margin-bottom: 1cm;
+  padding: 20px;
+  background-color:rgba(206, 215, 218, 0.539);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(75, 71, 71); }
+
+#countdown {
+ margin: 5cm;
+  text-align: center;
+  margin-bottom: 1cm;}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+#timer div {
+  /* flex: 1; */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: gray;
+  box-shadow: 0px 0px 10px black;}
+
+#timer span {
+  display: block;  font-size: 36px;
+  font-weight: bold;}
+span[id^="days"],
+span[id^="hours"],
+span[id^="minutes"],
+span[id^="seconds"] {
+  color: #fff;}
+
+  footer {
+  position: fixed;  text-align: center;
+  bottom: 0;  width: 100%;
+  background-color: black;
+  color:white;
+  font-size: 0.4cm; padding-top: 0cm;
+  padding-bottom: 0cm;  height: 1 cm;
+
+body{color:black }
+
+.text{
+line-height: 0.25cm;}
+#icon {background: black;}}

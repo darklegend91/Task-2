@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Countdown</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image:url(https://static.vecteezy.com/system/resources/thumbnails/000/251/537/small/abstract-happy-diwali-decorative-background.jpg);
+            background-size:cover;
+            background-repeat: none;
+            background-position: center;
+            font-family: 'Roboto', sans-serif;
+            color:#fff;
+            
+        }
+
+        header {
+            margin-top: -2.4cm;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: -1cm;
+        }
+
+        #heading {
+            font-size: 3cm;
+            font-family:'segoe print';
+            font-weight: bold;
+            color:yellow;
+            margin-top: 1cm;
+            margin-bottom: 1cm;
+        }
+
+        .para{
+            margin-top: 0cm;
+            font-size: .7cm;
+            font-family:'segoe print';
+            font-weight:bold;
+            margin-bottom: 1cm;
+            line-height: 2cm;
+            color: black;
+        }
+        
+        #wishes{
+            font-size: 0.7cm;
+            font-family:'segoe print';
+            font-weight: bold;
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            color:black;
+            background-color:rgba(5,5,22,0.2);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(167, 87, 87, 0.2);
+        }
+
+
+        #countdown {
+            text-align: center;
+        }
+
+        #timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #timer div {
+            /* flex: 1; */
+            margin: 10px;
+            padding: 20px;
+            background-color:chocolate;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #timer span {
+            display: block;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        span[id^="days"],
+        span[id^="hours"],
+        span[id^="minutes"],
+        span[id^="seconds"] {
+            
+            color: #fff;
+        }
+
+        footer {
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 0.6cm;
+            padding-top: 0cm;
+            padding-bottom: 0cm;
+            height: 1.5m;
+        
+            body{
+                color:black;
+            }
+        .text{
+            color:black;
+            
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <header class="text" >
+        <h1 id="heading">Happy Diwali 2024</h1>
+        <p class="para">The festival of lights is indeed a beautiful time to celebrate with our loved ones. The glittering of lights,diyas and lanterns fill the sky !!<br>Diwali is a very auspicious occasion that is celebrated with much fervour,cheer and joy!</p>
+    </header>
+
+    <div id="countdown" class="text" >
+        <div id="timer">
+            <div>
+                <span id="days">0</span>
+                <span>Days</span>
+            </div>
+            <div>
+                <span id="hours">0</span>
+                <span>Hours</span>
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                <span>Seconds</span>
+            </div>
+        </div>
+    </div>
+    <div id="wishes">
+    <p class="text">   
+    Hope the festival of lights brings bright sparkles of peace,contentment,joy,and happiness which stays with you throughout this year and also in the years to come. May the lamp of joy remain illuminated in your life now and forever. have a joyous Diwali!!<br><br>
+    </p>
+    </div>
+    <div id="icon" style="float: left;">
+        <a href="Main web Page.html" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2544/2544087.png" alt="homepage icon" width="100" height="100" a>
+    </div>
+    <div id="icon" style="float: right;" >
+        <a href="Calendar.webp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3652/3652267.png" alt="calendar_icon" width="100" height="100" a>
+    </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set the date we're counting down to
+            var countDownDate = new Date("Oct 29, 2024 00:00:00").getTime();
+
+            // Update the countdown every 1 second
+            var x = setInterval(function () {
+                // Get the current date and time
+                var now = new Date().getTime();
+
+                // Calculate the remaining time
+                var distance = countDownDate - now;
+
+                // Calculate days, hours, minutes, and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the countdown
+                document.getElementById("days").innerHTML = `${days}`;
+                document.getElementById("hours").innerHTML = `${hours}`;
+                document.getElementById("minutes").innerHTML = `${minutes}`;
+                document.getElementById("seconds").innerHTML = `${seconds}`;
+
+                // If the countdown is over, display a message
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Happy Diwali";
+                }
+            }, 1000); 
+        });
+    </script>
+
+</body>
+</html>
